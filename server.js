@@ -24,7 +24,7 @@ try {
 app.use(express.static(path.join(__dirname, 'dist', 'paintle-front-end', 'browser')));
 
 // API route to get puzzle by day
-app.get('/api/puzzle/:id', (req, res) => {
+app.get('/api/puzzles/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const puzzle = puzzles.find(p => p.id == id);
     if (puzzle) {
